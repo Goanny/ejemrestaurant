@@ -1,7 +1,10 @@
 
  <div class="container"><br>
  
-
+  <?php
+  // Te recomiendo utilizar esta conección, la que utilizas ya no es la recomendada. 
+  $sql = new PDO('mysql:host=localhost;dbname=restaurant', 'root', ''); // el campo vaciío es para la password. 
+  ?>
  <?php  
  if (isset($_GET['action'])) {
    if($_GET['action'] == 'okReservas'){
@@ -84,6 +87,25 @@
           </thead>
 
     <tbody>
+      <tr style="text-align: center">
+        <?php foreach ($sql->query('SELECT * from reservas') as $row){?>
+          <td class=" alert-danger" style="text-align: center"><?php echo $row['nombrecliente'] ?></td>
+          <td class=" alert-danger" style="text-align: center"><?php echo $row['cantidadpersonas'] ?></td>   
+          <td class=" alert-danger" style="text-align: center"><?php echo $row['telefono'] ?></td>   
+          <td class=" alert-danger" style="text-align: center"><?php echo $row['diallegada'] ?></td>   
+          <td class=" alert-danger" style="text-align: center"><?php echo $row['horallegada'] ?></td>  
+          <td class=" alert-danger" style="text-align: center"><?php echo $row['observaciones'] ?></td>
+          <td  class=" alert-danger" style="text-align: center">&nbsp; &nbsp;
+            <a href="index.php?action=editarReservas&idreserva=<?php echo $resultados->idreserva;?>">
+              <i class="fa fa-edit btn btn-primary btn-sm "></i></a>
+		        <a href="index.php?action=reservas&idBorrar=<?php echo $resultados->idreserva;?>">
+              <i class="fa fa-trash-o btn btn-danger btn-sm"></i></a>
+          </td>
+
+      </tr>        
+        <?php }
+        ?>
+
       <?php 
         $vistaUsuario = new MvcController();
         $vistaUsuario->getReservasController();

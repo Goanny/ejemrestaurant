@@ -137,6 +137,29 @@ class Paginas{
 		else if($enlaces == "cambioPedidos" ){
 			$module =  "Views/pedidos/pedidos.php";		
 		}
+
+	// =============================================================
+		// enlaces del menu
+	// =====================================================
+
+	else if($enlaces == "menu" || $enlaces == "index" ){
+		$module =  "Views/menu/menu.php";		
+	}
+	// else if($enlaces == "okPedidos" ){
+	// 	$module =  "Views/pedidos/pedidos.php";		
+	// }
+	// else if($enlaces == "borrarPedidos" ){
+	// 	$module =  "Views/pedidos/pedidos.php";	
+	// }
+	// else if($enlaces == "buscarPedidos" ){
+	// 	$module =  "Views/pedidos/buscarPedidos.php";		
+	// }
+	// else if($enlaces == "editarPedidos" ){
+	// 	$module =  "Views/pedidos/editarPedidos.php";		
+	// }     
+	// else if($enlaces == "cambioPedidos" ){
+	// 	$module =  "Views/pedidos/pedidos.php";		
+	// }
 		
 
 

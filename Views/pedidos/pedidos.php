@@ -53,7 +53,7 @@
     <div class="col-md-4">  
      <div class="alert alert-success" role="alert">
 
-         <strong>Pedidos Activos : </strong>
+         <strong>Total Pedidos : </strong>
           <?php $vistaPedidos = new PedidosController();
                  $vistaPedidos->totalPedidosController();
            ?>                                     

@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="assets/css/estilos.css"> 
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/chosen/chosen.min.css">
-
-
+  <link rel="stylesheet" href="assets/css/main.css" />
 
 
 <script src="assets/js/lib/jquery.js"></script>
@@ -26,6 +25,7 @@
 <script src="assets/js/lib/bootstrap.js"></script>  
 <script src="assets/js/lib/menu.js"></script>  
 <script src="assets/js/calendario.js"></script>  
+<script src="assets/js/jquery.min.js" ></script>
   <title>Administrador</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
 
       <ul class="nav navbar-nav">
 
-        <li class="nav-item dropdown nav-item active">
+        <!-- <li class="nav-item dropdown nav-item active">
           <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <i class="fa fa-product-hunt" aria-hidden="true"></i> Productos</a>
               <div class="dropdown-menu" id="sub" aria-labelledby="responsiveNavbarDropdown">
@@ -65,7 +65,7 @@
                 <a id="sub" class="dropdown-item" href="ventasDiarias">
                   <i class="btn btn-danger btn-sm  fa fa-usd"></i>Reportes Ventas</a>        
               </div>
-        </li>
+        </li> -->
 
             <!-- User =====================================
             ============================================ -->
@@ -81,6 +81,9 @@
       <a class="navbar-brand" href="pedidos">
         <i class="fa fa-table" aria-hidden="true"></i> Pedidos
       </a>
+      <a class="navbar-brand" href="menu">
+        <i class="fa fa-table" aria-hidden="true"></i> Menú
+      </a>
   </div>
 </nav>
 <?php else: ?>
@@ -94,7 +97,7 @@
     <a class="navbar-brand" href="index"><i class="fa fa-table" aria-hidden="true"></i> Reservas</a>
     <ul class="nav navbar-nav">
 
-      <li class="nav-item dropdown nav-item active">
+      <!-- <li class="nav-item dropdown nav-item active">
         <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-product-hunt" aria-hidden="true"></i> Productos</a>
           <div class="dropdown-menu" id="sub" aria-labelledby="responsiveNavbarDropdown">
             <a id="sub" class="dropdown-item" href="listadoProd">
@@ -119,7 +122,7 @@
                 <a id="sub" class="dropdown-item" href="ventasDiarias">
                   <i class="btn btn-danger btn-sm  fa fa-usd"></i>Ventas Diarias</a>
           </div>
-      </li> 
+      </li>  -->
 
       <!-- USUARIO NO ADMINISTRADOR -->
        <li class="nav-item dropdown  nav-item active float-xs-right">
@@ -131,7 +134,8 @@
         </div>
       </li>
     </ul>
-    <a class="navbar-brand" href="pedidos"><i class="fa fa-table" aria-hidden="true"></i> Pedidos</a>
+    <a class="navbar-brand" href="pedidos"><i class="fa fa-file-text-o" aria-hidden="true"></i> Pedidos</a>
+    <a class="navbar-brand" href="menu"><i class="fa fa-pie-chart" aria-hidden="true"></i> Menú</a>
   </div>
 </nav>
 <?php endif ?>
